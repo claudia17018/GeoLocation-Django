@@ -32,7 +32,7 @@ def calculate_distance_view(request):
    l_lon = lon
    pointA =(l_lat,l_lon)
 # initial folium map
-   m = folium.Map(width= 1000, height= 500, location = get_center_coordinates(l_lat,l_lon), zoom_start = 8)
+   m = folium.Map(width= 900, height= 500, location = get_center_coordinates(l_lat,l_lon), zoom_start = 8)
 # location marker
    folium.Marker([l_lat, l_lon], tooltip= 'click here for more', popup= city['city'],
                 icon=folium.Icon(color='purple')).add_to(m)

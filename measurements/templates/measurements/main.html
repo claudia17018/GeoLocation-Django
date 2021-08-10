@@ -1,11 +1,8 @@
 {% extends 'base.html' %}
-
-{% block title %}
-calculate distance
-{% endblock title%}
+{% load static %}
 {% block content %}
-
-
+<h1>Calculate distance</h1>
+<hr>
 <!-- Modal -->
 <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog">
@@ -13,7 +10,6 @@ calculate distance
       <div class="modal-header">
         <h5 class="modal-title" id="exampleModalLabel">Distance to {{destination}}</h5>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
         </button>
       </div>
       <div class="modal-body">
@@ -22,17 +18,16 @@ calculate distance
     </div>
   </div>
 </div>
-
-{{map | safe}}
-
+<p>Please enter the city</p>
 <form action="" method="POST" autocomplete="off">
    {% csrf_token %}
-   {{form.as_p}}
-   <button type="submit" class="btn btn-primary">Confirm</button>
+   {{form}}
+   <button type="submit" class="btn btn-primary ">Confirm</button>
 </form><br>
 
-This product includes GeoLite2 data created by MaxMind, available from
-<a href="https://www.maxmind.com">https://www.maxmind.com</a>
+<div class="map">
+{{map | safe}}
+</div>
 
 {% if request.POST and distance is not None %}
    <script>

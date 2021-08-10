@@ -1,0 +1,37 @@
+html, body{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    width: 100%;
+}
+
+.map {
+    display: flex;
+    align-content: center;
+    padding: 0, 6vh;
+}
+
+h1{
+    font-weight: bold;
+    color: cornflowerblue;
+    text-align: center;
+}
+
+footer{
+    background-color: black;
+    color: white;
+    padding: 0.2rem;
+    text-align: center;
+}
+
+input{
+    width: 50%;
+    padding: 3px;
+    margin-left: 3px
+}
+a {
+    text-decoration: none;
+}
